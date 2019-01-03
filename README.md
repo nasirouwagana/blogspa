@@ -1,4 +1,12 @@
 # blogspa
+A little Blog App with Unit Testing and End-to-end Testing
+
+## Features
+* [vue](https://vuejs.org)
+* [vuex](https://vuex.vuejs.org)
+* [vue-router](http://router.vuejs.org)
+* [vuetify](https://vuetifyjs.com)
+* [vee-validate](https://baianat.github.io/vee-validate)
 
 ## Project setup
 ```
