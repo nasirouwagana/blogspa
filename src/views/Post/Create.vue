@@ -84,6 +84,7 @@
                     offset-md3
                   >
                     <v-btn
+                      id="submit-btn"
                       color="primary"
                       @click.native="submitForm()"
                       :disabled="loading || errors.any() || !formIsValid"
@@ -116,7 +117,7 @@ export default {
       title: '',
       body: '',
       loading: false,
-      hasMessage: '',
+      hasMessage: false,
       messageType: '',
       message: ''
     }
