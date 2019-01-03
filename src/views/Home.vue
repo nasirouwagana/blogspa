@@ -36,9 +36,7 @@
 
           <v-card-actions>
             <v-spacer/>
-            <v-btn
-              :to="`posts/${post.id}`"
-            >
+            <v-btn :to="`posts/${post.id}`">
               Read more
             </v-btn>
           </v-card-actions>
@@ -54,7 +52,7 @@ import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
-      messages: ['Hey John', 'Howdy Paco']
+      //
     }
   },
 
