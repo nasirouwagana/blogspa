@@ -7,7 +7,7 @@
     >
       <v-toolbar-side-icon/>
       <v-toolbar-title class="headline text-uppercase">
-        {{ appName }}
+        <h1>{{ appName }}</h1>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
