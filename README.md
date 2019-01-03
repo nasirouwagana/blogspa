@@ -7,6 +7,7 @@ A little Blog App with Unit Testing and End-to-end Testing
 * [vue-router](http://router.vuejs.org)
 * [vuetify](https://vuetifyjs.com)
 * [vee-validate](https://baianat.github.io/vee-validate)
+* [JSONPlaceholder](https://jsonplaceholder.typicode.com)
 
 ## Project setup
 ```
