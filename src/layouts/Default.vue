@@ -1,25 +1,45 @@
 <template>
   <v-app>
-    <v-toolbar app>
+    <v-toolbar
+      dark
+      app
+      class="primary"
+    >
+      <v-toolbar-side-icon/>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        {{ appName }}
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
+      <v-toolbar-items>
+        <v-btn flat>Home</v-btn>
+        <v-btn flat>Posts Management</v-btn>
+      </v-toolbar-items>
     </v-toolbar>
 
     <v-content>
-      <v-slide-y-transition mode="out-in">
-        <router-view/>
-      </v-slide-y-transition>
+      <v-container fluid>
+        <v-slide-y-transition mode="out-in">
+          <router-view/>
+        </v-slide-y-transition>
+      </v-container>
     </v-content>
+
+    <v-footer
+      app
+      fixed
+    >
+      <v-layout
+        justify-center
+        row
+        wrap
+      >
+      <v-flex
+        text-xs-center
+      >
+        <div>&copy; {{ appName }} {{ appDate }}</div>
+      </v-flex>
+      </v-layout>
+    </v-footer>
   </v-app>
 </template>
 
@@ -29,6 +49,16 @@ export default {
   data () {
     return {
       //
+    }
+  },
+
+  computed: {
+    appName () {
+      return process.env.VUE_APP_NAME
+    },
+
+    appDate () {
+      return new Date().getFullYear()
     }
   }
 }
