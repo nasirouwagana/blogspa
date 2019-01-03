@@ -54,7 +54,7 @@ import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
-      //
+      messages: ['Hey John', 'Howdy Paco']
     }
   },
 
@@ -69,7 +69,7 @@ export default {
   },
 
   mounted () {
-    this.$store.dispatch('posts')
+    this.$store.dispatch('getPosts')
   }
 }
 </script>

@@ -53,7 +53,7 @@ export default {
   },
 
   mounted () {
-    this.$store.dispatch('post', this.id)
+    this.$store.dispatch('getPost', this.id)
   }
 }
 </script>

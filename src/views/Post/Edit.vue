@@ -149,7 +149,7 @@ export default {
   },
 
   mounted () {
-    this.$store.dispatch('post', this.id)
+    this.$store.dispatch('getPost', this.id)
       .then(data => {
         this.title = data.title
         this.body = data.body

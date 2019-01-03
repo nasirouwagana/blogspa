@@ -7,12 +7,12 @@ const state = {
   post: ''
 }
 
-const getters = {
+export const getters = {
   posts: state => state.posts,
   post: state => state.post
 }
 
-const mutations = {
+export const mutations = {
   SET_POSTS (state, payload) {
     state.posts = payload
   },
@@ -22,20 +22,23 @@ const mutations = {
   }
 }
 
-const actions = {
-  posts ({ commit }) {
+export const actions = {
+  getPosts ({ commit }) {
     axios.get(`${API_URL}/posts`)
       .then(response => {
         commit('SET_POSTS', response.data.slice(0, 8))
       })
   },
 
-  post ({ commit }, payload) {
+  getPost ({ commit }, payload) {
     return new Promise(resolve => {
       axios.get(`${API_URL}/posts/${payload}`)
         .then(response => {
           commit('SET_POST', response.data)
           resolve(response.data)
+        })
+        .catch(error => {
+          resolve(error)
         })
     })
   },
@@ -47,7 +50,7 @@ const actions = {
           resolve(response.data)
         })
         .catch(error => {
-          resolve(error.response.data)
+          resolve(error)
         })
     })
   },
@@ -61,7 +64,7 @@ const actions = {
           resolve(response.data)
         })
         .catch(error => {
-          reject(error.response.data)
+          resolve(error)
         })
     })
   },
@@ -73,7 +76,7 @@ const actions = {
           resolve(response.data)
         })
         .catch(error => {
-          reject(error.response.data)
+          resolve(error)
         })
     })
   }

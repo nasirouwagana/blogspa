@@ -174,7 +174,7 @@ export default {
   },
 
   mounted () {
-    this.$store.dispatch('posts')
+    this.$store.dispatch('getPosts')
   },
 
   methods: {
