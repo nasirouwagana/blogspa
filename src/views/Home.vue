@@ -19,7 +19,7 @@
             class="white--text"
             height="200px"
             :aspect-ratio="16/9"
-            :src="`https://unsplash.it/150/300?image=${Math.floor(Math.random() * 100) + 1}`"
+            :src="`https://unsplash.it/150/300?image=${Math.floor(Math.random() * 10) + 1}`"
           >
             <v-container fill-height fluid>
               <v-layout fill-height>
@@ -36,7 +36,11 @@
 
           <v-card-actions>
             <v-spacer/>
-            <v-btn>Read more</v-btn>
+            <v-btn
+              :to="`posts/${post.id}`"
+            >
+              Read more
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>

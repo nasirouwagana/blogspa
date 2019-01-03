@@ -11,8 +11,20 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn flat>Home</v-btn>
-        <v-btn flat>Posts Management</v-btn>
+        <v-btn
+          flat
+          to="/"
+          exact
+        >
+          Home
+        </v-btn>
+        <v-btn
+          flat
+          to="/admin/posts"
+          exact
+        >
+          Posts Management
+        </v-btn>
       </v-toolbar-items>
     </v-toolbar>
 
